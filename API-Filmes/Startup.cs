@@ -30,6 +30,8 @@ namespace API_Filmes
         {
             services.AddDbContext<MovieContext>(opts => opts.UseMySQL(Configuration.GetConnectionString("MovieConnection")));
 
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

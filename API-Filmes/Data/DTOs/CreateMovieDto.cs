@@ -1,14 +1,10 @@
-﻿using System;
+﻿using API_Filmes.Models;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace API_Filmes.Models
+namespace API_Filmes.Data.DTOs
 {
-    public class Movie
+    public class CreateMovieDto
     {
-        [Key]
-        [Required]
-        public int Id { get; set; }
         [Required(ErrorMessage = "Film must have a title")]
         public string Title { get; set; }
         public Genre Genre { get; set; }
